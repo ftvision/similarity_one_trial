@@ -105,7 +105,7 @@ function sendMail(){
           }
         }
       });
-    alert('Your response is sent to us! Thank you very much! Please close the window.')
+    alert('Your response is sent to us! Thank you very much!')
 
 }   
 
