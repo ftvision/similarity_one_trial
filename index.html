@@ -27,26 +27,44 @@
 </head>
 <body>
 <div id="fullpage">
+  <div class="section">
+          <div class = "storyboard">
+          <!-- Introduction -->     
+            <div>
+              <p class="lead"><strong>Similarity Judgement Experiment</strong></p>
+              <p>You are going to see two figures, each at a time.</p>
+              <p>When you finishi reading this instruction, click "start" to see the first figure.</p>
+              <p>Look at the figure for as long as you like. When you are ready, go to the second figure.</p>
+              <p>Please judge <strong>how similar is the second figure to the first</strong>.</p>
+              <p>Please always compare the second to the first (directional judgement).</p>
+              <p>Thanks for taking this super quick experiment!</p>
+              <a href="#secondPage"><button type="button" class="btn btn-primary" onclick="location.reload()">Start<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a>
+            </div>
+            
+          </div>
+    </div> 
     <div class="section">
-        <div class="slide"> 
         	<div class = "storyboard">
-	      	<!-- The first image -->
-
-        		<button type="button" class="btn btn-default fp-controlArrow fp-next">Go to Figure 2<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>  
-
+	      	<!-- The first image --> 		 
+            <div>
+              <p>Look at this figure for as long as you like. When you are ready, press <strong>go to figure 2</strong>. </p>
+              <a href="#thirdPage"><button type="button" class="btn btn-default">Go to Figure 2<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a>
+            </div>
     				<div class = "image-canvas">
-    					<img style = "display: block; margin-left:auto; margin-right:auto" src="smiley.gif" alt="FirstImage" id="first_image">
+    					<img style = "display: block; margin-left:auto; margin-right:auto" src="" alt="FirstImage" id="first_image">
     					<p style ="text-align:center">Figure 1</p>
     				</div>
-        	</div> 
-        </div>
-        <div class="slide"> 
+            
+        	</div>
+    </div> 
+    <div class="section">
          <div class = "storyboard">
           <!-- The second image and response -->
-					<button type="button" class="btn btn-default fp-controlArrow fp-prev"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Go to Figure 1</button>
+             <p>Please rate how similar is this <strong>Figure 2</strong> similar to <strong>Figure 1</strong>. Choose one on the scale and press <strong>Submit</strong>to send your response! </p>
+ 	
   
      				<div class = "image-canvas">
-     					<img style = "display: block; margin-left:auto; margin-right:auto" src="smiley.gif" alt="SecondImage" id="second_image">
+     					<img style = "display: block; margin-left:auto; margin-right:auto" src="" alt="SecondImage" id="second_image">
     					<p style ="text-align:center">Figure 2</p>
     				</div>
           <!-- Likert Scale -->
@@ -83,16 +101,14 @@
         						<label>7<br>Very Similar</label>
       					</li>      					      					      					      					      					 
  					  	<div class="buttons">
-      				<button class="clear">Clear</button>
-      				<button class="submit" onclick="WriteToFile()">Submit</button>
+      				<button class="clear" type='button'>Clear</button>
+      				<button class="submit" onclick="sendMail()" type='button'>Submit</button>
     					</div>
   					</form>
+          <a href="#firstPage"><button type="button" class="btn btn-default">Go to Introduction and Restart!<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a>
   				</div>
-				</div>
-<!--         <div class="section">Some section</div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
---> 
+		   </div>
+  </div>
 </div>
 </body>
 </html>

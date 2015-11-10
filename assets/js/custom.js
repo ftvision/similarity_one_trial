@@ -25,7 +25,7 @@ $(document).ready(function() {
         //Navigation
         menu: false,
         lockAnchors: false,
-        anchors:['firstPage', 'secondPage'],
+        anchors:['firstPage', 'secondPage', 'thirdPage'],
         navigation: false,
         navigationPosition: 'right',
         navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -80,26 +80,32 @@ $(document).ready(function() {
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 });
-function WriteToFile()
-{
-    var filename = "response.txt";
+function sendMail(){
     var url1 = document.getElementById("first_image").src;
     var url2 = document.getElementById("second_image").src;
     var resp = $("input[name=likert]:checked").val();
-    var text = url1 + " " + url2 + " " + resp.toString();
-    var pom = document.createElement('a');
-    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    pom.setAttribute('download', filename);
+    var text = "picture1:" + url1 + "<br> " + "picture2:" + url2 + "<br> " + "response:" + resp.toString();
 
-    if (document.createEvent) {
-        var event = document.createEvent('MouseEvents');
-        event.initEvent('click', true, true);
-        pom.dispatchEvent(event);
-    }
-    else {
-        pom.click();
-    }
-    window.location.href='http://www.google.com/';
+    $.ajax({
+        type: "POST",
+        url: "https://mandrillapp.com/api/1.0/messages/send.json",
+        data: {
+          'key': 'AbBMyFhHFAtYTlPHyJ87xQ',
+          'message': {
+            'from_email': 'ftvision1121@gmail.com',
+            'to': [
+              {
+                'email': 'ftvision1121@gmail.com',
+                'name': 'Participant',
+                'type': 'to'
+              }
+            ],
+            'subject': 'New Response!',
+            'html': text
+          }
+        }
+      });
+    alert('Your response is sent to us! Thank you very much! Please close the window.')
 
-}
+}   
 
