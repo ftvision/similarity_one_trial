@@ -1,0 +1,58 @@
+
+body{
+	font-size: 20px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+li{
+	font-family: 'Carrois Gothic SC', sans-serif;
+	padding: 0.2em 0.2em 0.2em 0.2em;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+
+#cover{
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+	font-size: 500%;
+}
+#sign{
+	font-family: KaiTi, KaiTi_GB2312, STKaiti;
+	color: white;
+	background: red;	
+	margin-left: 0.5em;
+	padding: 0.2em;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+#GS{
+	color:#dd4b39;
+	padding: 0.25em;
+}
+#NT{
+	color:#aad450;
+	padding: 0.25em;
+}
+#LI{
+	color:#007bb6;
+	padding: 0.25em;
+}
+#enter{
+	position:absolute;
+	right:10%;
+	bottom: 10%;
+	text-align: right;
+}
+#motto{
+	position:absolute;
+	width: 40%;
+	left:10%;
+	top: 10%;
+}

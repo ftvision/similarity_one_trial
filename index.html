@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Similarity Test</title>
+	<meta charset="UTF-8">
+    <!-- Custom CSS & Bootstrap Core CSS  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Custom javascript and other javascript libraries -->
+    <script type="text/javascript" src="assets/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/npm.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="fullpage">
+    <div class="section">
+        <div class="slide"> 
+        	<div class = "storyboard">
+	      	<!-- The first image -->
+
+        		<button type="button" class="btn btn-default fp-controlArrow fp-next">Go to Figure 2<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>  
+
+    				<div class = "image-canvas">
+    					<img style = "display: block; margin-left:auto; margin-right:auto" src="smiley.gif" alt="FirstImage" id="first_image">
+    					<p style ="text-align:center">Figure 1</p>
+    				</div>
+        	</div> 
+        </div>
+        <div class="slide"> 
+         <div class = "storyboard">
+          <!-- The second image and response -->
+					<button type="button" class="btn btn-default fp-controlArrow fp-prev"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Go to Figure 1</button>
+  
+     				<div class = "image-canvas">
+     					<img style = "display: block; margin-left:auto; margin-right:auto" src="smiley.gif" alt="SecondImage" id="second_image">
+    					<p style ="text-align:center">Figure 2</p>
+    				</div>
+          <!-- Likert Scale -->
+         	<div class="wrap">
+ 	 					<form id = "response">
+  				  	<label class="statement">Please indicate how similar is the second image to the first?</label>
+    					<ul class='likert'>
+      					<li>
+        						<input type="radio" name="likert" value="1">
+        						<label>1<br>Very Different</label>
+      					</li>
+      					<li>
+        						<input type="radio" name="likert" value="2">
+        						<label>2</label>
+      					</li>
+      					<li>
+        						<input type="radio" name="likert" value="3">
+        						<label>3</label>
+      					</li>
+      					<li>
+        						<input type="radio" name="likert" value="4">
+        						<label>4</label>
+      					</li>
+      					<li>
+        						<input type="radio" name="likert" value="5">
+        						<label>5</label>
+      					</li>
+      					<li>
+        						<input type="radio" name="likert" value="6">
+        						<label>6</label>
+      					</li>
+      					<li>
+        						<input type="radio" name="likert" value="7">
+        						<label>7<br>Very Similar</label>
+      					</li>      					      					      					      					      					 
+ 					  	<div class="buttons">
+      				<button class="clear">Clear</button>
+      				<button class="submit" onclick="WriteToFile()">Submit</button>
+    					</div>
+  					</form>
+  				</div>
+				</div>
+<!--         <div class="section">Some section</div>
+    <div class="section">Some section</div>
+    <div class="section">Some section</div>
+--> 
+</div>
+</body>
+</html>
+</html>
