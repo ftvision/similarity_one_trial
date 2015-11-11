@@ -31,25 +31,21 @@
           <div class = "storyboard">
           <!-- Introduction -->     
             <div>
-             
-              <p class="lead"><strong>Similarity Judgement Experiment</strong></p>
-              <hr>
-              <h4>First, Click this button to Refresh a New Experiment</h4>
-              <button type="button" class="btn btn-success" onclick="location.reload()">Refresh for a New Experiment</button>
+
+              <h2>Similarity Judgement Experiment</strong></h2>
               <hr>
 
-              <h4>Second, Read the following Instruction</h4>
-              <p>When you finish reading this instruction, click "start" to see the first figure.</p>
-              
-              <blockquote>
-                <p>1. You are going to see two figures, each at a time.</p>
-              
-                <p>2. Look at the first figure for as long as you like. When you are ready, press [go to figure 2]. At that point you will see a second picture and you will be asked how similar it is to the first. You will not be able to go back to see the first again. <strong>Respond in whatever way feels intuitive</strong>.</p>
-              </blockquote>
+             <h3>Please read all instructions before you proceed:</h3>
+             <p class="lead">1. In this experiment you will see two pictures. They will appear one at a time. <br>
+             2. Your job is to tell us how similar the second picture is to the first. <br>
+             3. When you press start, below, picture 1 will appear. You can look at it for as long as you want. And then press CONTINUE. <br>
+            4. After you press continue, you will not be able to see picture 1 again. But picture 2 will appear. <br>
+            5. On the provided scale, let us know how similar picture 2 is to picture 1.<br>
+            Before you press the blue start button, press the green refresh button:</p>
 
-              <p> <strong>NOTE: how similar is the second figure to the first</strong>.Please always compare the second to the first (directional judgement).</p>
-              <p>After your response, you can close the window, or return here and let your friends do it. Thanks!</p>
-              <a href="#secondPage"><button type="button" class="btn btn-primary">Start<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a>
+              <div><button type="button" class="btn btn-success" onclick="location.reload()">Refresh the Trial</button></div>
+              <p></p>
+              <div><a href="#secondPage"><button type="button" class="btn btn-primary">Start<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a></div>
             </div>
             
           </div>
@@ -58,12 +54,11 @@
         	<div class = "storyboard">
 	      	<!-- The first image --> 		 
             <div>
-              <p>Look at this figure for as long as you like. When you are ready, press <strong>go to figure 2</strong>. </p>
+              <p>Look at this figure for as long as you like. When you are ready, press <strong>CONTINUE</strong> to see the picture 2. </p>
               <a href="#thirdPage"><button type="button" class="btn btn-default">Go to Figure 2<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a>
             </div>
     				<div class = "image-canvas">
     					<img style = "display: block; margin-left:auto; margin-right:auto" src="" alt="FirstImage" id="first_image">
-    					<p style ="text-align:center">Figure 1</p>
     				</div>
             
         	</div>
@@ -71,17 +66,16 @@
     <div class="section">
          <div class = "storyboard">
           <!-- The second image and response -->
-             <p>Please rate how similar is this <strong>Figure 2</strong> similar to <strong>Figure 1</strong>. Choose one on the scale and press <strong>Submit</strong>to send your response! </p>
- 	
+            <h2>How similar is this picture to the one that you just saw? </h2>
+      
   
      				<div class = "image-canvas">
      					<img style = "display: block; margin-left:auto; margin-right:auto" src="" alt="SecondImage" id="second_image">
-    					<p style ="text-align:center">Figure 2</p>
     				</div>
           <!-- Likert Scale -->
          	<div class="wrap">
  	 					<form id = "response">
-  				  	<label class="statement">Please indicate how similar is the second image to the first?</label>
+  				  	<label class="statement">How similar is this picture to the one that you just saw? </label>
     					<ul class='likert'>
       					<li>
         						<input type="radio" name="likert" value="1">

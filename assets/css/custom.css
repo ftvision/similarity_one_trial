@@ -22,14 +22,15 @@ body {
 }
 
 .storyboard {
-  height : 50%;
-  width: 50%;
+  height : 75%;
+  width: 75%;
   margin: auto ;
 }
 .image-canvas {
   width:200px;
   margin-left: auto ;
   margin-right: auto ; 
+  margin-bottom: 100px;
 }
 
 /*Likert Scale*/
