@@ -86,6 +86,14 @@ function sendMail(){
     var resp = $("input[name=likert]:checked").val();
     var text = "picture1:" + url1 + "<br> " + "picture2:" + url2 + "<br> " + "response:" + resp.toString();
 
+    //generate random string
+    var charset = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var length = 8;
+    var result = '';
+    for (var i = length; i > 0; --i) result += charset[Math.round(Math.random() * (charset.length - 1))];
+    result = resp.toString() + '_' + result;
+    var MTurk_Code = result;
+    
     $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -105,7 +113,9 @@ function sendMail(){
           }
         }
       });
-    alert('Your response is sent to us! Thank you very much!')
+    
+    alert('Your response is sent to us! Thank you very much!\n' 
+        + 'Amazon Turk Code:  ' + MTurk_Code)
 
 }   
 
