@@ -114,8 +114,10 @@ function sendMail(){
         }
       });
     
-    alert('Your response is sent to us! Thank you very much!\n' 
-        + 'Amazon Turk Code:  ' + MTurk_Code)
+    alert('System has successfully sent your response to us! \n' 
+        + 'Amazon Turk Code:  ' + MTurk_Code + '\n'
+        + 'Please copy the code if you need and close the window!\n'
+        + 'Thank you very much!') 
 
 }   
 
