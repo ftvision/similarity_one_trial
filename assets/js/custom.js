@@ -21,6 +21,14 @@ $(document).ready(function() {
         image1.src = 'assets/img/'+target.toString()+'-2.jpg';
         image2.src = 'assets/img/'+target.toString()+'-1.jpg';
     };
+    //randomzie userID
+    var charset = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var length = 8;
+    var userID = '';
+    for (var i = length; i > 0; --i) userID += charset[Math.round(Math.random() * (charset.length - 1))];
+    var destination = document.getElementById("userID");
+    destination.setAttribute("data", userID);
+
     $('#fullpage').fullpage({
         //Navigation
         menu: false,
@@ -84,7 +92,8 @@ function sendMail(){
     var url1 = document.getElementById("first_image").src;
     var url2 = document.getElementById("second_image").src;
     var resp = $("input[name=likert]:checked").val();
-    var text = "picture1:" + url1 + "<br> " + "picture2:" + url2 + "<br> " + "response:" + resp.toString();
+    var userID = document.getElementById("userID").getAttribute("data");
+    var text = "picture1:" + url1 + "<br/>" + "picture2:" + url2 + "<br/>" + "response:" + resp.toString() + "<br/>" + "userID:" + userID;
 
     //generate random string
     var charset = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
