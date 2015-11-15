@@ -13,6 +13,12 @@ $(document).ready(function() {
     var image1 = document.getElementById("first_image");
     var image2 = document.getElementById("second_image");
     var target = Math.floor((Math.random() * 24) + 1);
+
+    //selectively increase the response for 1,11,23,3,15,9,21
+    while (target != 1 && target != 11 && target !=23 && target !=3 && target!=15 && target!=9 && target!=21){
+        target = Math.floor((Math.random() * 24) + 1);
+    }
+    
     if (target <= 12) {
         image1.src = 'assets/img/'+target.toString()+'-1.jpg';
         image2.src = 'assets/img/'+target.toString()+'-2.jpg';
