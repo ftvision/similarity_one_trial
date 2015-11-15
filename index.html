@@ -49,8 +49,8 @@
             </div>
             
           </div>
-    </div> 
-    <div class="section">
+  </div> 
+  <div class="section">
         	<div class = "storyboard">
 	      	<!-- The first image --> 		 
             <div>
@@ -62,21 +62,19 @@
     				</div>
             
         	</div>
-    </div> 
-    <div class="section">
-         <div class = "storyboard">
-          <!-- The second image and response -->
-            <h2>How similar is this picture to the one that you just saw? </h2>
-      
-  
-     				<div class = "image-canvas">
-     					<img style = "display: block; margin-left:auto; margin-right:auto" src="" alt="SecondImage" id="second_image">
-    				</div>
-          <!-- Likert Scale -->
-         	<div class="wrap">
- 	 					<form id = "response">
-  				  	<label class="statement">How similar is this picture to the one that you just saw? [Choose one number, and press Submit]</label>
-    					<ul class='likert'>
+  </div> 
+  <div class="section">
+    <div class = "storyboard">
+    <!-- The second image and response -->
+      <h2>How similar is this picture to the one that you just saw? </h2>
+   		<div class = "image-canvas">
+   				<img style = "display: block; margin-left:auto; margin-right:auto" src="" alt="SecondImage" id="second_image">
+   		</div>
+    <!-- Likert Scale -->
+     	<div class="wrap">
+ 	 				<form id = "response">
+  		  	<label class="statement">How similar is this picture to the one that you just saw? [Choose one number, and press Submit]</label>
+  				<ul class='likert'>
       					<li>
         						<input type="radio" name="likert" value="1">
         						<label>1<br>Very Different</label>
@@ -104,16 +102,24 @@
       					<li>
         						<input type="radio" name="likert" value="7">
         						<label>7<br>Very Similar</label>
-      					</li>      					      					      					      					      					 
+      					</li>     
+        </ul>				 
  					  	<div class="buttons">
       				<button class="clear" type='button'>Clear</button>
       				<button class="submit" onclick="sendMail()" type='button'>Submit</button>
     					</div>
-  					</form>
-          <a href="#firstPage"><button type="button" class="btn btn-default">Go to Introduction and Restart!<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a>
-  				</div>
-		   </div>
+  			</form>
+    	</div>
+    
+      <p class='lead'>
+          Response: <span id="resp" class="label label-warning">Waiting for response</span> <br>
+          Amazon Turk Code: <span id="turk-code" class="label label-warning">Code will appear after your submission</span> <br>
+          Please copy the code if you need, and you are all set. <br>
+          Thank you very much! Please close the window and exit.
+      </p> 
+	  </div>
   </div>
+
 </div>
 </body>
 </html>

@@ -123,10 +123,14 @@ function sendMail(){
         }
       });
     
-    alert('System has successfully sent your response to us! \n' 
-        + 'Amazon Turk Code:  ' + MTurk_Code + '\n'
-        + 'Please copy the code if you need and close the window!\n'
-        + 'Thank you very much!') 
+    $("#resp").html('System has successfully sent your response to us! Please do NOT submit again');
+    $("#resp").removeClass("label-warning")
+    $("#resp").addClass("label-success")
+
+    $("#turk-code").html(MTurk_Code);
+    $("#turk-code").removeClass("label-warning")
+    $("#turk-code").addClass("label-success")
+
 
 }   
 
