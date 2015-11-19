@@ -12,20 +12,23 @@ $(function () {
 $(document).ready(function() {
     var image1 = document.getElementById("first_image");
     var image2 = document.getElementById("second_image");
+    var image3 = document.getElementById("third_image");
     var target = Math.floor((Math.random() * 24) + 1);
 
     //selectively increase the response for 1,11,23,3,15,9,21
-    while (target != 1 && target != 11 && target !=23 && target !=3 && target!=15 && target!=9 && target!=21){
-        target = Math.floor((Math.random() * 24) + 1);
-    }
+    //while (target != 1 && target != 11 && target !=23 && target !=3 && target!=15 && target!=9 && target!=21){
+    //    target = Math.floor((Math.random() * 24) + 1);
+    //}
     
     if (target <= 12) {
         image1.src = 'assets/img/'+target.toString()+'-1.jpg';
         image2.src = 'assets/img/'+target.toString()+'-2.jpg';
+        image3.src = 'assets/img/'+target.toString()+'-1.jpg';
     } else {
         target = target - 12;
         image1.src = 'assets/img/'+target.toString()+'-2.jpg';
         image2.src = 'assets/img/'+target.toString()+'-1.jpg';
+        image3.src = 'assets/img/'+target.toString()+'-2.jpg';
     };
     //randomzie userID
     var charset = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -97,9 +100,11 @@ $(document).ready(function() {
 function sendMail(){
     var url1 = document.getElementById("first_image").src;
     var url2 = document.getElementById("second_image").src;
+    var url3 = document.getElementById("third_image").src;
     var resp = $("input[name=likert]:checked").val();
     var userID = document.getElementById("userID").getAttribute("data");
-    var text = "picture1:" + url1 + "<br/>" + "picture2:" + url2 + "<br/>" + "response:" + resp.toString() + "<br/>" + "userID:" + userID;
+    var text = "picture1:" + url1 + "<br/>" + "picture2:" + url2 + "<br/>" +
+     "picture3:" + url3 + "<br />" + "response:" + resp.toString() + "<br/>" + "userID:" + userID;
 
     //generate random string
     var charset = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -123,7 +128,7 @@ function sendMail(){
                 'type': 'to'
               }
             ],
-            'subject': 'New Response!',
+            'subject': 'Three Item Rating',
             'html': text
           }
         }

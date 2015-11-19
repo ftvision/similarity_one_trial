@@ -36,12 +36,11 @@
               <hr>
 
              <h3>Please read all instructions before you proceed:</h3>
-             <p class="lead">1. In this experiment you will see two pictures. They will appear one at a time. <br>
-             2. Your job is to tell us how similar the second picture is to the first. <br>
-             3. When you press start, below, picture 1 will appear. You can look at it for as long as you want. And then press CONTINUE. <br>
-            4. After you press continue, you will not be able to see picture 1 again. But picture 2 will appear. <br>
-            5. On the provided scale, let us know how similar picture 2 is to picture 1.<br>
-            Before you press the blue start button, press the green refresh button:</p>
+             <p class="lead">
+              1. In this experiment you will see three pictures. They will appear at the same time and stand in a vertical line. <br>
+              2. The central one is different but similar to the other two. <br>
+              3. Your job is to tell us how similar the central picture is to the other two and indicate your response on the provided scale from 1(very different) to 7(very similar).<br>
+              4. Before you press the blue start button, press the green refresh button:</p>
 
               <div><button type="button" class="btn btn-success" onclick="location.reload()">Refresh the Trial</button></div>
               <p id="userID" data="abcdefgh"></p>
@@ -51,75 +50,70 @@
           </div>
   </div> 
   <div class="section">
-        	<div class = "storyboard">
-	      	<!-- The first image --> 		 
-            <div>
-              <p>Look at this figure for as long as you like. When you are ready, press <strong>CONTINUE</strong> to see the picture 2. </p>
-              <a href="#thirdPage"><button type="button" class="btn btn-default">CONTINUE<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a>
-            </div>
-    				<div class = "image-canvas">
-    					<img style = "display: block; margin-left:auto; margin-right:auto" src="" alt="FirstImage" id="first_image">
-    				</div>
-            
-        	</div>
-  </div> 
-  <div class="section">
     <div class = "storyboard">
     <!-- The second image and response -->
-      <h2>How similar is this picture to the one that you just saw? </h2>
+      <h4>Watch these three pictures and judge how similar the central picture is to the pictures on the top and on the bottom. </h4>
+      <p><a href="#thirdPage"><button type="button" class="btn btn-default">proceed to give your rating of similarity<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></a></p>
    		<div class = "image-canvas">
-   				<img style = "display: block; margin-left:auto; margin-right:auto" src="" alt="SecondImage" id="second_image">
+          <img src="" alt="FirstImage" id="first_image" class="stimuli">
+
+   				<img src="" alt="SecondImage" id="second_image" class="stimuli">
+
+          <img src="" alt="ThirdImage" id="third_image" class="stimuli">
    		</div>
-    <!-- Likert Scale -->
-     	<div class="wrap">
- 	 				<form id = "response">
-  		  	<label class="statement">How similar is this picture to the one that you just saw? [Choose one number, and press Submit]</label>
-  				<ul class='likert'>
-      					<li>
-        						<input type="radio" name="likert" value="1">
-        						<label>1<br>Very Different</label>
-      					</li>
-      					<li>
-        						<input type="radio" name="likert" value="2">
-        						<label>2</label>
-      					</li>
-      					<li>
-        						<input type="radio" name="likert" value="3">
-        						<label>3</label>
-      					</li>
-      					<li>
-        						<input type="radio" name="likert" value="4">
-        						<label>4</label>
-      					</li>
-      					<li>
-        						<input type="radio" name="likert" value="5">
-        						<label>5</label>
-      					</li>
-      					<li>
-        						<input type="radio" name="likert" value="6">
-        						<label>6</label>
-      					</li>
-      					<li>
-        						<input type="radio" name="likert" value="7">
-        						<label>7<br>Very Similar</label>
-      					</li>     
-        </ul>				 
- 					  	<div class="buttons">
-      				<button class="clear" type='button'>Clear</button>
-      				<button class="submit" onclick="sendMail()" type='button'>Submit</button>
-    					</div>
-  			</form>
-    	</div>
+	  </div>
+  </div>
+  <div class="section">
+    <div class="storyboard">
+         <!-- Likert Scale -->
+      <div class="wrap">
+          <form id = "response">
+          <label class="statement">How similar the central picture is to the pictures on the top and on the bottom. [Choose one number, and press Submit]</label>
+          <ul class='likert'>
+                <li>
+                    <input type="radio" name="likert" value="1">
+                    <label>1<br>Very Different</label>
+                </li>
+                <li>
+                    <input type="radio" name="likert" value="2">
+                    <label>2</label>
+                </li>
+                <li>
+                    <input type="radio" name="likert" value="3">
+                    <label>3</label>
+                </li>
+                <li>
+                    <input type="radio" name="likert" value="4">
+                    <label>4</label>
+                </li>
+                <li>
+                    <input type="radio" name="likert" value="5">
+                    <label>5</label>
+                </li>
+                <li>
+                    <input type="radio" name="likert" value="6">
+                    <label>6</label>
+                </li>
+                <li>
+                    <input type="radio" name="likert" value="7">
+                    <label>7<br>Very Similar</label>
+                </li>     
+        </ul>        
+              <div class="buttons">
+              <button class="clear" type='button'>Clear</button>
+              <button class="submit" onclick="sendMail()" type='button'>Submit</button>
+              </div>
+        </form>
+      </div>
     
       <p class='lead'>
           Response: <span id="resp" class="label label-warning">Waiting for response</span> <br>
           Amazon Turk Code: <span id="turk-code" class="label label-warning">Code will appear after your submission</span> <br>
           Please copy the code if you need, and you are all set. <br>
           Thank you very much! Please close the window and exit.
-      </p> 
-	  </div>
+      </p>
+    </div>
   </div>
-
 </div>
 </body>
 </html>
