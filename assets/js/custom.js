@@ -134,8 +134,8 @@ function sendMail(){
         }
       });
     
-    document.getElementById("mySubmit").disabled = true;
-
+    var subButton = document.getElementById("mySubmit");
+    subButton.disabled = true;
 
     $("#resp").html('System has successfully sent your response to us! Please do NOT submit again');
     $("#resp").removeClass("label-warning")
