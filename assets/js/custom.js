@@ -113,7 +113,7 @@ function sendMail(){
     for (var i = length; i > 0; --i) result += charset[Math.round(Math.random() * (charset.length - 1))];
     result = resp.toString() + '_' + result;
     var MTurk_Code = result;
-    
+     
     $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -134,6 +134,9 @@ function sendMail(){
         }
       });
     
+    document.getElementById("mySubmit").disabled = true;
+
+
     $("#resp").html('System has successfully sent your response to us! Please do NOT submit again');
     $("#resp").removeClass("label-warning")
     $("#resp").addClass("label-success")
